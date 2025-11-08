@@ -3,8 +3,8 @@ import cors from "cors"
 import mongoose from "mongoose"
 
 const app = express();
-const PORT = 8000
-const mongoDB_URI = "mongodb://127.0.0.1:27017/todoDB"
+const PORT = process.env.PORT || 8000
+const mongoDB_URI = process.env.mongoDB_URI ||"mongodb://127.0.0.1:27017/todoDB"
 
 app.use(express.json());
 app.use(cors())
